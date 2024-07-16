@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Film Search</title>
+    <link rel="stylesheet" href="styleFilmSearch.css" />
+  </head>
+  <body>
+    <div class="background"></div>
+    <header>
+      <!-- заголовок страницы -->
+      <h1>Movie Search</h1>
+      <!-- форма для поиска фильмов -->
+      <form id="searchForm">
+        <input
+          type="text"
+          id="search-input"
+          placeholder="Search for movies or series..."
+        />
+        <button type="submit">Search</button>
+      </form>
+    </header>
+    <main>
+      <div id="movies" class="movies"></div>
+      <div id="observer" class="observer hidden"></div>
+      <div id="loader" class="loader hidden"></div>
+    </main>
+    <!-- подвал страницы -->
+    <footer>
+      <p>© 2024 Movie Search. All rights reserved.</p>
+    </footer>
+    <!-- модальное окно для показа деталей фильма -->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div id="movieDetails"></div>
+      </div>
+    </div>
+
+    <!-- шаблон для отображения одного фильма -->
+    <template id="movie-template">
+      <div class="movie">
+        <img src="" alt="" />
+        <h3></h3>
+        <p class="type"></p>
+        <p class="year"></p>
+        <button>Details</button>
+      </div>
+    </template>
+
+    <!-- шаблон для отображения подробной информации о фильме -->
+    <template id="details-template">
+      <h2></h2>
+      <img src="" alt="" />
+      <p class="released"></p>
+      <p class="genre"></p>
+      <p class="country"></p>
+      <p class="director"></p>
+      <p class="writer"></p>
+      <p class="actors"></p>
+      <p class="awards"></p>
+      <a id="imdb-link" href="#" target="_blank">IMDb Link</a>
+    </template>
+    <script src="Film_Search.js"></script>
+  </body>
+</html>
